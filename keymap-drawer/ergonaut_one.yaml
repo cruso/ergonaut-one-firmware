@@ -1,7 +1,6 @@
 layout: {zmk_keyboard: ergonaut_one}
 layers:
   default:
-  - LMETA
   - Q
   - W
   - E
@@ -12,20 +11,16 @@ layers:
   - I
   - O
   - P
-  - DELETE
-  - Ctrl
-  - {t: A, h: LMETA}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: LEFT SHIFT}
-  - {t: F, h: Ctrl}
+  - {t: A, h: Ctrl}
+  - {t: S, h: Alt}
+  - {t: D, h: Gui}
+  - {t: F, h: LSFT}
   - G
   - H
-  - {t: J, h: Ctrl}
-  - {t: K, h: RIGHT SHIFT}
-  - {t: L, h: LEFT ALT}
-  - {t: ;, h: LMETA}
-  - ''''
-  - {t: Shift, h: sticky}
+  - {t: J, h: RSFT}
+  - {t: K, h: Gui}
+  - {t: L, h: Alt}
+  - {t: ;, h: Ctrl}
   - Z
   - X
   - C
@@ -36,92 +31,79 @@ layers:
   - ','
   - .
   - /
-  - RIGHT ALT
-  - Ctrl
-  - {t: ␣, h: nav, s: _}
-  - {t: ↹, h: kb_utils}
-  - {t: ⏎, h: num}
-  - {t: BACKSPACE, h: symb}
-  - {t: RIGHT SHIFT, h: sticky}
+  - nav
+  - ␣
+  - ↹
+  - ENTER
+  - sym
+  - ⌫
   nav:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Left Click
-  - Mouse ←
-  - Mouse ↓
-  - Mouse ↑
-  - Mouse →
-  - Right Click
-  - {t: ▽, type: trans}
-  - Gui
-  - Alt
-  - LEFT SHIFT
-  - LEFT CONTROL
-  - {t: ▽, type: trans}
-  - APPLICATION
-  - ←
-  - DOWN ARROW
-  - UP ARROW
-  - →
-  - CMENU
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Back Click
   - Home
-  - PAGE DOWN
+  - Page Down
   - Page Up
   - End
-  - Forward Click
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Alt
+  - Gui
+  - LSFT
+  - {t: ▽, type: trans}
+  - ←
+  - ↓
+  - ↑
+  - →
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  symb:
   - {t: ▽, type: trans}
+  sym:
   - '!'
-  - '?'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '&'
+  - '*'
   - '{'
   - '}'
-  - +
-  - $
+  - '|'
   - '`'
-  - Sft+%
-  - Sft+3
+  - '~'
   - ^
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - <
-  - '&arrow_func_tap'
-  - {t: (, h: LEFT SHIFT}
-  - {t: ), h: Ctrl}
-  - '-'
+  - +
   - '='
-  - {t: '''', h: Ctrl}
-  - {t: '&', h: RIGHT SHIFT}
-  - '"'
-  - Sft+;
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT PAREN
+  - RIGHT PAREN
+  - LCURBR
+  - RCURBR
   - \
-  - /
-  - '['
-  - ']'
-  - '*'
+  - <
+  - '>'
+  - '-'
   - _
-  - '@'
-  - Sft+\
-  - '#'
-  - Sft+#
+  - ':'
+  - ;
+  - '"'
+  - ''''
+  - '?'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +112,43 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   num:
-  - Esc
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - KP MINUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - KP PLUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  fun:
   - F1
   - F2
   - F3
@@ -141,114 +159,38 @@ layers:
   - F8
   - F9
   - F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F11
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - {t: '4', h: Ctrl}
-  - '5'
-  - '6'
-  - {t: '7', h: Ctrl}
-  - '8'
-  - '9'
-  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - Sft+9
-  - Sft+0
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - _
-  - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  kb_utils:
-  - Boot
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - '&mkp MB3'
-  - ''
-  - '&studio_unlock'
-  - ''
-  - PREVIOUS
-  - MUTE
-  - PLAY PAUSE
-  - ⏭️
-  - ''
-  - ''
-  - Mouse ←
-  - Mouse ↓
-  - Mouse ↑
-  - Mouse →
-  - ''
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
-  - ''
-  - Back Click
-  - Scroll ↓
-  - Scroll ↑
-  - Forward Click
-  - ''
-  - ''
-  - ''
-  - {type: held}
-  - '&mkp MB1'
-  - '&mkp MB2'
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
-- p: [17, 18]
+- p: [0, 1]
+  k: Esc
+  draw_separate: true
+- p: [8, 9]
+  k: ↹
+  draw_separate: true
+- p: [10, 11]
   k: Caps Word
-  l: [default]
-- p: [1, 2]
-  k: ESCAPE
-  l: [default]
-- p: [11, 23]
-  k: VOLUME UP
-  l: [default]
-- p: [23, 35]
-  k: VOLUME DOWN
-  l: [default]
-- p: [5, 6]
-  k: CAPSLOCK
-  l: [default]
-- p: [10, 9]
-  k: DELETE
-  l: [default]
-- p: [7, 8]
-  k: _
-  l: [default]
-- p: [4, 3]
-  k: '-'
-  l: [default]
-- p: [2, 3, 4]
-  k: '&emdsh'
-  l: [default]
-- p: [1, 4, 7, 10]
-  k: F19
-  l: [default]
-- p: [7, 19]
-  k: ''''
-  l: [default]
-- p: [8, 20]
-  k: '@'
-  l: [default]
