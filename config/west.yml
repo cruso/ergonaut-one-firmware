@@ -12,5 +12,8 @@ manifest:
     - name: ergonautkb-zmk-module
       remote: ergonautkb
       revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: main      
   self:
     path: config
