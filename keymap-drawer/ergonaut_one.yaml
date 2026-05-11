@@ -1,6 +1,7 @@
 layout: {zmk_keyboard: ergonaut_one}
 layers:
-  default:
+  BASE:
+  - {t: ']', h: Gui}
   - Q
   - W
   - E
@@ -11,16 +12,20 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: Ctrl}
-  - {t: S, h: Alt}
-  - {t: D, h: Gui}
-  - {t: F, h: LSFT}
+  - '['
+  - {t: '`', h: Ctrl}
+  - A
+  - S
+  - D
+  - F
   - G
   - H
-  - {t: J, h: RSFT}
-  - {t: K, h: Gui}
-  - {t: L, h: Alt}
-  - {t: ;, h: Ctrl}
+  - J
+  - K
+  - L
+  - ;
+  - {t: '''', h: Ctrl}
+  - {t: '-', h: Alt}
   - Z
   - X
   - C
@@ -31,166 +36,147 @@ layers:
   - ','
   - .
   - /
-  - nav
-  - ␣
-  - ↹
-  - ENTER
-  - sym
-  - ⌫
-  nav:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Home
-  - Page Down
-  - Page Up
-  - End
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Alt
-  - Gui
-  - LSFT
-  - {t: ▽, type: trans}
-  - ←
-  - ↓
-  - ↑
-  - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  sym:
+  - {t: \, h: Alt}
+  - {t: ↹, h: NAV}
+  - {t: ␣, h: Shift}
+  - {t: ⏎, h: SYM}
+  - {t: Esc, h: SYM}
+  - {t: ⌫, h: Shift}
+  - {t: ⌦, h: NAV}
+  SYM:
+  - '`'
   - '!'
   - '@'
   - '#'
   - $
   - '%'
   - '&'
-  - '*'
+  - '|'
+  - '['
+  - ']'
+  - '~'
+  - \
+  - ↹
+  - (
+  - )
   - '{'
   - '}'
-  - '|'
-  - '`'
-  - '~'
   - ^
-  - +
-  - '='
-  - LEFT PAREN
-  - RIGHT PAREN
-  - LCURBR
-  - RCURBR
-  - \
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ':'
+  - '"'
+  - Esc
   - <
   - '>'
+  - +
   - '-'
+  - '='
   - _
-  - ':'
+  - '*'
+  - /
   - ;
-  - '"'
   - ''''
-  - '?'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⏎
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  num:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '7'
-  - '8'
-  - '9'
-  - KP MINUS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '4'
-  - '5'
-  - '6'
-  - KP PLUS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '0'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  fun:
+  NAV:
   - F1
   - F2
   - F3
   - F4
   - F5
   - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - Home
+  - Page Down
+  - Page Up
+  - End
+  - Print Scrn
+  - Insert
+  - Ctrl
+  - Alt
+  - Gui
+  - Shift
+  - Caps Lock
+  - ↹
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ⌦
+  - APP
+  - Esc
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP PLUS
+  - KP MINUS
+  - MUTE
+  - Vol Down
+  - Vol Up
+  - Pause Break
+  - SLCK
+  - CLCK
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F11
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  ADJ:
+  - Boot
+  - '&studio_unlock'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&studio_unlock'
+  - Boot
+  - BT CLR
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - BT 5
+  - BT 4
+  - BT 3
+  - BT 2
+  - BT 1
+  - BT CLR
+  - Reset
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Reset
+  - {type: held}
+  - ''
+  - {type: held}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [0, 1]
+- p: [14, 15]
+  k: Caps Word
+- p: [1, 2]
   k: Esc
-  draw_separate: true
 - p: [8, 9]
   k: ↹
   draw_separate: true
-- p: [10, 11]
-  k: Caps Word

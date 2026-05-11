@@ -1,104 +1,134 @@
 /*
- * Ergonaut One — adapted from thrly-corne-zmk
- * 42-key programmer-focused layout
+ * Ergonaut One — upgraded programmer layout
+ * Inspired by thrly-corne-zmk
  *
- * Features:
- * - QWERTY
- * - Homerow mods
- * - Symbol layer
- * - Navigation layer
- * - Number layer
- * - Thumb-friendly layout
- * - Works for Vim / IDE / terminal workflow
+ * Goals:
+ * - Keep your current muscle memory
+ * - Improve programming ergonomics
+ * - Better symbols placement
+ * - Cleaner navigation workflow
+ * - Preserve tri-layer setup
+ * - Safe migration path
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define BASE 0
-#define NAV 1
-#define SYM 2
-#define NUM 3
-#define FUN 4
+#define DEF 0
+#define SYM 1
+#define NAV 2
+#define ADJ 3
+
+&lt {
+    quick-tap-ms = <200>;
+};
+
+&mt {
+    quick-tap-ms = <200>;
+};
 
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tri_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <ADJ>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
+        /* =========================================================
+         * DEFAULT
+         * ========================================================= */
+
         default_layer {
+            display-name = "BASE";
 
             bindings = <
-/* ------------------------------------------------- LEFT ------------------------------------------------- */
-/* ROW 1 */
-&kp Q            &kp W            &kp E            &kp R            &kp T                 &kp Y            &kp U            &kp I            &kp O            &kp P
-/* ROW 2 */
-&mt LCTRL A      &mt LALT S       &mt LGUI D       &mt LSFT F       &kp G                 &kp H            &mt RSFT J       &mt RGUI K       &mt RALT L       &mt RCTRL SEMI
-/* ROW 3 */
-&kp Z            &kp X            &kp C            &kp V            &kp B                 &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH
-/* THUMBS */
-                                  &mo NAV          &kp SPACE        &kp TAB               &kp ENTER        &mo SYM          &kp BSPC
-            >;
+/* LEFT */                                                                                 /* RIGHT */
+&mt LGUI RBKT     &kp Q      &kp W      &kp E      &kp R      &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P        &kp LBKT
+&mt LCTRL GRAVE   &kp A      &kp S      &kp D      &kp F      &kp G        &kp H        &kp J        &kp K        &kp L        &kp SEMI     &mt RCTRL SQT
+&mt LALT MINUS    &kp Z      &kp X      &kp C      &kp V      &kp B        &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH     &mt RALT BSLH
 
-            sensor-bindings = <>;
-        };
-
-        nav_layer {
-
-            bindings = <
-/* ------------------------------------------------- LEFT ------------------------------------------------- */
-&trans           &trans           &trans           &trans           &trans                &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          &trans
-&trans           &kp LALT         &kp LGUI         &kp LSFT         &trans                &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &trans
-&trans           &trans           &trans           &trans           &trans                &trans           &trans           &trans           &trans           &trans
-
-                                  &trans           &trans           &trans                &trans           &trans           &trans
+                                    &lt NAV TAB   &mt LSHFT SPACE   &lt SYM RET
+                                    &lt SYM ESC   &mt RSHFT BSPC    &lt NAV DEL
             >;
         };
+
+        /* =========================================================
+         * SYMBOLS / PROGRAMMING
+         * ========================================================= */
 
         sym_layer {
+            display-name = "SYM";
 
             bindings = <
-/* ------------------------------------------------- LEFT ------------------------------------------------- */
-&kp EXCL         &kp AT           &kp HASH         &kp DLLR         &kp PRCNT             &kp AMPS         &kp STAR         &kp LBRC         &kp RBRC         &kp PIPE
-&kp GRAVE        &kp TILDE        &kp CARET        &kp PLUS         &kp EQUAL             &kp LEFT_PAREN   &kp RIGHT_PAREN  &kp LCURBR       &kp RCURBR       &kp BSLH
-&kp LT           &kp GT           &kp MINUS        &kp UNDER        &kp COLON             &kp SEMI         &kp DQT          &kp SQT          &kp QUESTION     &trans
+/* LEFT */                                                                                 /* RIGHT */
+&kp GRAVE         &kp EXCL   &kp AT      &kp HASH    &kp DLLR    &kp PRCNT    &kp AMPS     &kp PIPE     &kp LBKT     &kp RBKT     &kp TILDE    &kp BSLH
+&kp TAB           &kp LPAR   &kp RPAR    &kp LBRC    &kp RBRC    &kp CARET    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp COLON    &kp DQT
+&kp ESC           &kp LT     &kp GT      &kp PLUS    &kp MINUS   &kp EQUAL    &kp UNDER    &kp STAR     &kp FSLH     &kp SEMI     &kp SQT      &kp RET
 
-                                  &trans           &trans           &trans                &trans           &trans           &trans
+                                       &trans        &trans        &trans
+                                       &trans        &trans        &trans
             >;
         };
 
-        num_layer {
+        /* =========================================================
+         * NAVIGATION / NUMPAD
+         * ========================================================= */
+
+        nav_layer {
+            display-name = "NAV";
 
             bindings = <
-/* ------------------------------------------------- LEFT ------------------------------------------------- */
-&trans           &trans           &trans           &trans           &trans                &kp N7           &kp N8           &kp N9           &kp KP_MINUS     &trans
-&trans           &trans           &trans           &trans           &trans                &kp N4           &kp N5           &kp N6           &kp KP_PLUS      &trans
-&trans           &trans           &trans           &trans           &trans                &kp N1           &kp N2           &kp N3           &kp N0           &trans
+/* LEFT */                                                                                   /* RIGHT */
+&kp F1            &kp F2        &kp F3      &kp F4      &kp F5      &kp F6      &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       &kp PSCRN      &kp INS
+&kp LCTRL         &kp LALT      &kp LGUI    &kp LSHFT   &kp CAPS    &kp TAB     &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &kp DEL        &kp K_APP
+&kp ESC           &kp KP_N7     &kp KP_N8   &kp KP_N9   &kp KP_PLUS &kp KP_MINUS &kp C_MUTE   &kp C_VOL_DN  &kp C_VOL_UP  &kp PAUSE_BREAK &kp SLCK     &kp CLCK
 
-                                  &trans           &trans           &trans                &trans           &trans           &trans
+                                           &trans        &trans        &trans
+                                           &trans        &trans        &trans
             >;
         };
 
-        fun_layer {
+        /* =========================================================
+         * ADJUST / SYSTEM
+         * ========================================================= */
+
+        adjust_layer {
+            display-name = "ADJ";
 
             bindings = <
-/* ------------------------------------------------- LEFT ------------------------------------------------- */
-&kp F1           &kp F2           &kp F3           &kp F4           &kp F5                &kp F6           &kp F7           &kp F8           &kp F9           &kp F10
-&trans           &trans           &trans           &trans           &trans                &trans           &trans           &trans           &trans           &kp F11
-&trans           &trans           &trans           &trans           &trans                &trans           &trans           &trans           &trans           &kp F12
+&bootloader      &studio_unlock &none         &none         &none         &none         &none         &none         &none         &none         &studio_unlock &bootloader
+&bt BT_CLR       &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR
+&sys_reset       &none          &none         &none         &none         &none         &none         &none         &none         &none         &none          &sys_reset
 
-                                  &trans           &trans           &trans                &trans           &trans           &trans
+                                         &trans        &none         &trans
+                                         &none         &trans        &trans
             >;
         };
     };
 
-    combos {
+    /* =========================================================
+     * COMBOS
+     * ========================================================= */
 
+    combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        combo_caps_word {
+            timeout-ms = <40>;
+            key-positions = <14 15>;
+            bindings = <&caps_word>;
+        };
+
+        combo_escape {
             timeout-ms = <30>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
 
@@ -106,12 +136,6 @@
             timeout-ms = <30>;
             key-positions = <8 9>;
             bindings = <&kp TAB>;
-        };
-
-        combo_caps {
-            timeout-ms = <30>;
-            key-positions = <10 11>;
-            bindings = <&caps_word>;
         };
     };
 };
