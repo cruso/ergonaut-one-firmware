@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: ergonaut_one}
 layers:
-  MAIN:
-  - {t: ']', h: Gui}
+  default:
+  - LMETA
   - Q
   - W
   - E
@@ -12,20 +12,20 @@ layers:
   - I
   - O
   - P
-  - '['
-  - {t: '`', h: Ctrl}
-  - A
-  - S
-  - D
-  - F
+  - DELETE
+  - Ctrl
+  - {t: A, h: LMETA}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT SHIFT}
+  - {t: F, h: Ctrl}
   - G
   - H
-  - J
-  - K
-  - L
-  - ;
-  - {t: '''', h: Ctrl}
-  - {t: '-', h: Alt}
+  - {t: J, h: Ctrl}
+  - {t: K, h: RIGHT SHIFT}
+  - {t: L, h: LEFT ALT}
+  - {t: ;, h: LMETA}
+  - ''''
+  - {t: Shift, h: sticky}
   - Z
   - X
   - C
@@ -36,15 +36,102 @@ layers:
   - ','
   - .
   - /
-  - {t: \, h: Alt}
-  - {t: ↹, h: NUM}
-  - {t: ␣, h: Shift}
-  - {t: ⏎, h: SYM}
-  - {t: Esc, h: SYM}
-  - {t: ⌫, h: Shift}
-  - {t: ⌦, h: NUM}
-  SYM:
-  - {t: F1, h: Gui}
+  - RIGHT ALT
+  - Ctrl
+  - {t: ␣, h: nav, s: _}
+  - {t: ↹, h: kb_utils}
+  - {t: ⏎, h: num}
+  - {t: BACKSPACE, h: symb}
+  - {t: RIGHT SHIFT, h: sticky}
+  nav:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Left Click
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
+  - Right Click
+  - {t: ▽, type: trans}
+  - Gui
+  - Alt
+  - LEFT SHIFT
+  - LEFT CONTROL
+  - {t: ▽, type: trans}
+  - APPLICATION
+  - ←
+  - DOWN ARROW
+  - UP ARROW
+  - →
+  - CMENU
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Back Click
+  - Home
+  - PAGE DOWN
+  - Page Up
+  - End
+  - Forward Click
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  symb:
+  - {t: ▽, type: trans}
+  - '!'
+  - '?'
+  - '{'
+  - '}'
+  - +
+  - $
+  - '`'
+  - Sft+%
+  - Sft+3
+  - ^
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - <
+  - '&arrow_func_tap'
+  - {t: (, h: LEFT SHIFT}
+  - {t: ), h: Ctrl}
+  - '-'
+  - '='
+  - {t: '''', h: Ctrl}
+  - {t: '&', h: RIGHT SHIFT}
+  - '"'
+  - Sft+;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - \
+  - /
+  - '['
+  - ']'
+  - '*'
+  - _
+  - '@'
+  - Sft+\
+  - '#'
+  - Sft+#
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  num:
+  - Esc
+  - F1
   - F2
   - F3
   - F4
@@ -55,120 +142,113 @@ layers:
   - F9
   - F10
   - F11
-  - F12
-  - {t: +, h: Ctrl}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '-', h: Ctrl}
-  - {t: '=', h: Alt}
+  - {t: ▽, type: trans}
   - '1'
   - '2'
   - '3'
-  - '4'
+  - {t: '4', h: Ctrl}
   - '5'
   - '6'
-  - '7'
+  - {t: '7', h: Ctrl}
   - '8'
   - '9'
   - '0'
-  - Alt
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - Sft+0
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - _
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  NUM:
-  - {t: KP NUM, h: Gui}
-  - KP SLASH
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
-  - Vol Up
-  - Home
-  - Print Scrn
-  - Page Up
-  - SLCK
-  - CLCK
-  - {t: '=', h: Ctrl}
-  - KP MULTIPLY
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
+  kb_utils:
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp MB1'
+  - '&mkp MB2'
+  - '&mkp MB3'
+  - ''
+  - '&studio_unlock'
+  - ''
+  - PREVIOUS
   - MUTE
-  - ←
-  - ↑
-  - →
-  - Insert
-  - {t: APP, h: Ctrl}
-  - Alt
-  - KP 0
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP DOT
-  - Vol Down
-  - End
-  - ↓
-  - Page Down
-  - Pause Break
-  - Alt
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  ADJ:
-  - Boot
-  - '&studio_unlock'
+  - PLAY PAUSE
+  - ⏭️
   - ''
   - ''
+  - Mouse ←
+  - Mouse ↓
+  - Mouse ↑
+  - Mouse →
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&studio_unlock'
-  - Boot
   - BT CLR
   - BT 1
   - BT 2
   - BT 3
   - BT 4
   - BT 5
-  - BT 5
-  - BT 4
-  - BT 3
-  - BT 2
-  - BT 1
-  - BT CLR
-  - Reset
+  - ''
+  - Back Click
+  - Scroll ↓
+  - Scroll ↑
+  - Forward Click
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Reset
-  - {type: held}
   - ''
   - {type: held}
+  - '&mkp MB1'
+  - '&mkp MB2'
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+combos:
+- p: [17, 18]
+  k: Caps Word
+  l: [default]
+- p: [1, 2]
+  k: ESCAPE
+  l: [default]
+- p: [11, 23]
+  k: VOLUME UP
+  l: [default]
+- p: [23, 35]
+  k: VOLUME DOWN
+  l: [default]
+- p: [5, 6]
+  k: CAPSLOCK
+  l: [default]
+- p: [10, 9]
+  k: DELETE
+  l: [default]
+- p: [7, 8]
+  k: _
+  l: [default]
+- p: [4, 3]
+  k: '-'
+  l: [default]
+- p: [2, 3, 4]
+  k: '&emdsh'
+  l: [default]
+- p: [1, 4, 7, 10]
+  k: F19
+  l: [default]
+- p: [7, 19]
+  k: ''''
+  l: [default]
+- p: [8, 20]
+  k: '@'
+  l: [default]
