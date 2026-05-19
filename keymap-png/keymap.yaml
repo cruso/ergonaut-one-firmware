@@ -1,0 +1,182 @@
+layout: {zmk_keyboard: ergonaut_one}
+layers:
+  BASE:
+  - {t: ']', h: Gui}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - {t: '`', h: Ctrl}
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - {t: '''', h: Ctrl}
+  - {t: '-', h: Alt}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: \, h: Alt}
+  - {t: ↹, h: NAV}
+  - {t: ␣, h: Shift}
+  - {t: ⏎, h: SYM}
+  - {t: Esc, h: SYM}
+  - {t: ⌫, h: Shift}
+  - {t: ⌦, h: NAV}
+  SYM:
+  - '`'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '&'
+  - '|'
+  - '['
+  - ']'
+  - '~'
+  - \
+  - ↹
+  - (
+  - )
+  - '{'
+  - '}'
+  - ^
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ':'
+  - '"'
+  - Esc
+  - <
+  - '>'
+  - +
+  - '-'
+  - '='
+  - _
+  - '*'
+  - /
+  - ;
+  - ''''
+  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NAV:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - Home
+  - Page Down
+  - Page Up
+  - End
+  - Print Scrn
+  - Insert
+  - Ctrl
+  - Alt
+  - Gui
+  - Shift
+  - Caps Lock
+  - ↹
+  - ←
+  - ↓
+  - ↑
+  - →
+  - ⌦
+  - APP
+  - Esc
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP PLUS
+  - KP MINUS
+  - MUTE
+  - Vol Down
+  - Vol Up
+  - Pause Break
+  - SLCK
+  - CLCK
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  ADJ:
+  - Boot
+  - '&studio_unlock'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&studio_unlock'
+  - Boot
+  - BT CLR
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - BT 5
+  - BT 4
+  - BT 3
+  - BT 2
+  - BT 1
+  - BT CLR
+  - Reset
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Reset
+  - {type: held}
+  - ''
+  - {type: held}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [14, 15]
+  k: Caps Word
+- p: [1, 2]
+  k: Esc
+- p: [8, 9]
+  k: ↹
+  draw_separate: true

@@ -1,0 +1,2 @@
+keymap -c ../keymap-drawer/config.yaml parse -z ../config/ergonaut_one.keymap -o keymap.yaml
+keymap -c ../keymap-drawer/config.yaml draw -k corne_rotated -l LAYOUT_split_3x6_3 keymap.yaml -o out/all_layers.svg
