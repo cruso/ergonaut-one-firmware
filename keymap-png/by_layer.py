@@ -16,7 +16,6 @@ layer_number = 0
 
 for layer in layers:
     svg_path = OUT / f'layer_{layer_number}.svg'
-    png_path = OUT / f'layer_{layer_number}.png'
 
     cmd = [
         'keymap',
@@ -41,4 +40,4 @@ for layer in layers:
 
     layer_number = layer_number + 1
 
-    print(f'Generated: {png_path}')
+    print(f'Generated: {svg_path}')
