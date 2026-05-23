@@ -2,39 +2,39 @@ layout: {zmk_keyboard: ergonaut_one}
 layers:
   BASE:
   - {t: ']', h: Gui}
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - '['
+  - {t: Q, br: Й}
+  - {t: W, br: Ц}
+  - {t: E, br: У}
+  - {t: R, br: К}
+  - {t: T, br: Е}
+  - {t: Y, br: Н}
+  - {t: U, br: Г}
+  - {t: I, br: Ш}
+  - {t: O, br: Щ}
+  - {t: P, br: З}
+  - {t: '[', br: Х}
   - {t: '`', h: Ctrl}
-  - A
-  - S
-  - D
-  - F
-  - G
-  - H
-  - J
-  - K
-  - L
-  - ;
+  - {t: A, br: Ф}
+  - {t: S, br: Ы}
+  - {t: D, br: В}
+  - {t: F, br: А}
+  - {t: G, br: П}
+  - {t: H, br: Р}
+  - {t: J, br: О}
+  - {t: K, br: Л}
+  - {t: L, br: Д}
+  - {t: ;, br: Ж}
   - {t: '''', h: Ctrl}
   - {t: '-', h: Alt}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - N
-  - M
-  - ','
-  - .
+  - {t: Z, br: Я}
+  - {t: X, br: Ч}
+  - {t: C, br: С}
+  - {t: V, br: М}
+  - {t: B, br: И}
+  - {t: N, br: Т}
+  - {t: M, br: Ь}
+  - {t: ',', br: Б}
+  - {t: ., br: Ю}
   - /
   - {t: \, h: Alt}
   - {t: ↹, h: NAV}
