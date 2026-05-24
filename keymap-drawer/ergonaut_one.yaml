@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - Y
+  - {t: Y, h: ADJ}
   - U
   - I
   - O
@@ -136,7 +136,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -166,9 +166,9 @@ layers:
   - ''
   - ''
   - Reset
-  - {type: held}
+  - {t: ▽, type: trans}
   - ''
-  - {type: held}
+  - {t: ▽, type: trans}
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
