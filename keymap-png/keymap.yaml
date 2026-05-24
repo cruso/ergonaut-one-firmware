@@ -62,10 +62,10 @@ layers:
   - '{'
   - '}'
   - ^
-  - AltGr+1
-  - AltGr+2
-  - AltGr+3
-  - AltGr+4
+  - RAlt+1
+  - RAlt+2
+  - RAlt+3
+  - RAlt+4
   - ':'
   - '"'
   - Esc
