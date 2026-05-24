@@ -138,7 +138,6 @@ path.combo { stroke: #7f7f7f; }
 text.br {
   translate: -4px -4px;
   font-size: 12px;
-  opacity: 0.7;
   fill: #7a1f1f;
 }
 </style>

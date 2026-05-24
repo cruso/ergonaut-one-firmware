@@ -173,9 +173,8 @@ draw_config:
     text.br {
       translate: -4px -4px;
       font-size: 12px;
-      opacity: 0.7;
       fill: #7a1f1f;
     }
-    
+  
   footer_text: 'Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>'
   dark_mode: auto
